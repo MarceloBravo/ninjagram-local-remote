@@ -1,0 +1,50 @@
+header{
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button{
+    width: 49%;
+    height: 50px;
+}
+
+#btn-info{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+#imagenes{
+    position: absolute;
+    top: 110px;
+    border-style: solid;
+    margin: 3%;
+    height: 78%;
+    overflow: auto;
+    width: 94%;
+}
+
+.myImage{
+    width: 45%;
+    border-style: solid;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 12px;
+}
+
+.newImage{
+    transform: rotate(270deg);
+    width: 210px;
+    height: 172px;
+    margin: 30px -10px;
+}
+
+.from-file{
+    width: 172px;
+    height: 220px;
+    margin: 30px 10px;
+}

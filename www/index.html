@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/index.css">
+        
+        <title>Ninjagram backup</title>
+
+    </head>
+    <body>
+        <div class="app">   
+            <header>Ninjagram Backup</header>
+            <div class="buttons">
+                <button id="btn-picture" type="button" class="btn btn-primary">Capturar imágen</button>
+                <button id="btn-load-picture" type="button" class="btn btn-primary">Cargar foto</button>                
+            </div>         
+            <div id="imagenes">
+
+            </div>
+            <button id="btn-info" type="button" class="btn btn-primary">Info</button>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+        
+        
+        <script src="./libs/credentials.js"></script>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
