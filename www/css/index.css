@@ -12,9 +12,18 @@ button{
     height: 50px;
 }
 
+.form-check{
+    position: fixed;
+    bottom: 0px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+
 #lbl-info{
     position: fixed;
-    bottom: -9px;
+    bottom: 30px;
     width: 100%;
     background-color: #007bff;
     color: white;
@@ -27,7 +36,7 @@ button{
     top: 110px;
     border-style: solid;
     margin: 3%;
-    height: 78%;
+    height: 73%;
     overflow: auto;
     width: 94%;
 }
