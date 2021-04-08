@@ -12,10 +12,14 @@ button{
     height: 50px;
 }
 
-#btn-info{
+#lbl-info{
+    position: fixed;
+    bottom: -9px;
     width: 100%;
-    position: absolute;
-    bottom: 0px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
 }
 
 #imagenes{

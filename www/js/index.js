@@ -1,7 +1,6 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 document.getElementById('btn-picture').addEventListener('click', takePicture);
 document.getElementById('btn-load-picture').addEventListener('click', loadPicture);
-document.getElementById('btn-info').addEventListener('click', networkInfo);
 
 document.addEventListener('offline', offline, false);
 document.addEventListener('online', online, false);
@@ -11,26 +10,15 @@ var fromCamera = false;
 const database = firebase.database().ref();
 var img = null;
 var storage = firebase.storage().ref();
+var interval = null;
 
-
-/*
-function subirImagen(img){
-    for(var x = 0; x < img.length; x++){
-        var message = img[x];
-        storage.putString(message, 'data_url').then(snapshot=>{
-            console.log('Datos actualizados');
-        }).catch(error => {
-            console.log(error);
-        })
-    }
-}
-*/
 
 function onDeviceReady() {
     // Cordova is now initialized. Have fun!
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     console.log(navigator.camera);
     cargarImagenes();
+    startInterval();
 }
 
 function loadPicture(){
@@ -60,8 +48,8 @@ function onSuccess(imageURI) {
     img = imagen;
 }
 
-function onFail(message) {
-    alert('Failed because: ' + message);
+function onFail(message) {    
+    alert(`Error al obtener la ${fromCamera ? 'foto'  : 'imágen'}: ${message}`);
 }
 
 function networkInfo(){
@@ -75,10 +63,8 @@ function networkInfo(){
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'No network connection';
-    alert('Connection type: ' + states[networkState]);
-    if(networkState === Connection.WIFFI){
-        online();
-    }
+    
+    document.getElementById('lbl-info').innerText = 'Tu conección es: ' + states[networkState];
 }
 
 
@@ -137,3 +123,9 @@ function cargarImagen(urlImage){
 
     document.getElementById('imagenes').appendChild(img);
 }
+
+
+function startInterval(){
+    interval = setInterval(networkInfo, 3000);
+}
+
