@@ -31,6 +31,20 @@ button{
     padding: 10px 0px;
 }
 
+.div-camera{
+    margin-top: 30px;
+}
+
+.from-camera{
+    transform: rotate(270deg);
+    top: -28px;
+    position: relative;
+}
+
+.from-camera + .img-delete{
+    top: -20px;
+}
+
 #imagenes{
     position: absolute;
     top: 110px;
@@ -50,7 +64,7 @@ button{
 }
 
 .newImage{
-    transform: rotate(270deg);
+    /*transform: rotate(270deg);*/
     width: 210px;
     height: 172px;
     margin: 30px -10px;
@@ -60,4 +74,16 @@ button{
     width: 172px;
     height: 220px;
     margin: 30px 10px;
+}
+
+.div-imagen{
+    width: 190px;
+    display: inline-flex;
+}
+
+.img-delete{
+    z-index: 10000;
+    position: relative;
+    left: -56px;
+    top: 28px;
 }
